@@ -1,8 +1,6 @@
 #**Traffic Sign Recognition** 
 
-## Arkadiusz Konior - Project 1.
-
----
+## Arkadiusz Konior - Project 2.
 
 ---
 
@@ -28,34 +26,31 @@ The goals / steps of this project are the following:
 [image7]: ./examples/placeholder.png "Traffic Sign 4"
 [image8]: ./examples/placeholder.png "Traffic Sign 5"
 
-## Rubric Points
-###Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
 
 ---
 ###Writeup / README
 
-####1. Provide a Writeup / README that includes all the rubric points and how you addressed each one. You can submit your writeup as markdown or pdf. You can use this template as a guide for writing the report. The submission includes the project code.
-
-You're reading it! and here is a link to my [project code](https://github.com/udacity/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb)
+Link to my [project code](https://github.com/szemranamszyca/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb)
 
 ###Data Set Summary & Exploration
 
-####1. Provide a basic summary of the data set. In the code, the analysis should be done using python, numpy and/or pandas methods rather than hardcoding results manually.
+####1. Dataset.
 
-I used the pandas library to calculate summary statistics of the traffic
-signs data set:
+To extract information about dataset, I've just used python functions. At this moment, validation set is loaded from provided file
 
-* The size of training set is ?
-* The size of the validation set is ?
-* The size of test set is ?
-* The shape of a traffic sign image is ?
-* The number of unique classes/labels in the data set is ?
+Number of training examples = 34799
+Number of validating examples = 4410
+Number of testing examples = 12630
+Image data shape = (32, 32, 3)
+Number of classes = 43
 
-####2. Include an exploratory visualization of the dataset.
+####2. Visualization of the dataset.
 
-Here is an exploratory visualization of the data set. It is a bar chart showing how the data ...
+Before any operation, here's few examples of signs from dataset:
+[samples]: ./imgs/samples.png "Samples"
 
-![alt text][image1]
+Distribution of samples:
+[distro_before]: ./examples/distro_before.png "Distribution"
 
 ###Design and Test a Model Architecture
 
