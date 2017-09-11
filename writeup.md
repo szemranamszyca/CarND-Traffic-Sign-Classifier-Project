@@ -17,14 +17,8 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./examples/visualization.jpg "Visualization"
-[image2]: ./examples/grayscale.jpg "Grayscaling"
-[image3]: ./examples/random_noise.jpg "Random Noise"
-[image4]: ./examples/placeholder.png "Traffic Sign 1"
-[image5]: ./examples/placeholder.png "Traffic Sign 2"
-[image6]: ./examples/placeholder.png "Traffic Sign 3"
-[image7]: ./examples/placeholder.png "Traffic Sign 4"
-[image8]: ./examples/placeholder.png "Traffic Sign 5"
+[samples]: ./imgs/samples.png "Samples"
+[distro_before]: ./imgs/distro_before.png "Label's frequency histogram"
 
 
 ---
@@ -38,19 +32,19 @@ Link to my [project code](https://github.com/szemranamszyca/CarND-Traffic-Sign-C
 
 To extract information about dataset, I've just used python functions. At this moment, validation set is loaded from provided file
 
-Number of training examples = 34799
-Number of validating examples = 4410
-Number of testing examples = 12630
-Image data shape = (32, 32, 3)
-Number of classes = 43
+Number of training examples = 34799  
+Number of validating examples = 4410  
+Number of testing examples = 12630  
+Image data shape = (32, 32, 3)  
+Number of classes = 43  
 
 ####2. Visualization of the dataset.
 
 Before any operation, here's few examples of signs from dataset:
-[samples]: ./imgs/samples.png "Samples"
+[samples]
 
-Distribution of samples:
-[distro_before]: ./examples/distro_before.png "Distribution"
+Histogram of samples at the beginning:
+[distro_before]
 
 ###Design and Test a Model Architecture
 
