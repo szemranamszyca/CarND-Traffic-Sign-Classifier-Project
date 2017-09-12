@@ -1,4 +1,4 @@
-#**Traffic Sign Recognition** 
+# **Traffic Sign Recognition** 
 
 ## Arkadiusz Konior - Project 2.
 
@@ -18,17 +18,24 @@ The goals / steps of this project are the following:
 [//]: # (Image References)
 
 [samples]: ./imgs/samples.png "Samples"
+[samples_grey]: ./imgs/sample_grey_aug.png "Samples after modifications"
 [distro_before]: ./imgs/distro_before.png "Label's frequency histogram"
+[scaled]: ./imgs/scaled.png "Example of scaled image"
+[rotated]: ./imgs/rotated.png "Example of rotated image"
+[blured]: ./imgs/blured.png "Example of blured image"
+[combined]: ./imgs/blured.png "Example all methods combined"
+ 	
+
 
 
 ---
-###Writeup / README
+### Writeup / README
 
 Link to my [project code](https://github.com/szemranamszyca/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb)
 
-###Data Set Summary & Exploration
+### Data Set Summary & Exploration
 
-####1. Dataset.
+#### 1. Dataset.
 
 To extract information about dataset, I've just used python functions. At this moment, validation set is loaded from provided file
 
@@ -38,35 +45,40 @@ Number of testing examples = 12630
 Image data shape = (32, 32, 3)  
 Number of classes = 43  
 
-####2. Visualization of the dataset.
+#### 2. Visualization of the dataset.
 
 Before any operation, here's few examples of signs from dataset:
-[samples]
+![Samples][samples]
 
 Histogram of samples at the beginning:
-[distro_before]
+![Histogram][distro_before]
 
-###Design and Test a Model Architecture
+### Design and Test a Model Architecture
 
-####1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, and provide example images of the additional data. Then describe the characteristics of the augmented training set like number of images in the set, number of images for each class, etc.)
+#### 1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, and provide example images of the additional data. Then describe the characteristics of the augmented training set like number of images in the set, number of images for each class, etc.)
 
-As a first step, I decided to convert the images to grayscale because ...
+As a first step, I've converted all images to greyscale, as it was suggested at *Traffic Sign Recognition with Multi-Scale Convolutional Networks*
 
-Here is an example of a traffic sign image before and after grayscaling.
+To augmented data, I've written some function to help mi with that:
++ blur
+![Blured image][blured]
++ rotate
+![Rotated image][rotated]
++ scaling
+![Scaled image][scaled]
 
-![alt text][image2]
+All of them you can find in 5-8 cells.
 
-As a last step, I normalized the image data because ...
+As a last step for augmentation I combined all of these method on one image, here's the example:
+![Combined all of methods][combined]
 
-I decided to generate additional data because ... 
+I also normalized data and I used  suggested method.
 
-To add more data to the the data set, I used the following techniques because ... 
+Additional data helps for better learning of my nerual network. 
 
-Here is an example of an original image and an augmented image:
+Here's a set of example images after all of these modficiations:
 
-![alt text][image3]
-
-The difference between the original data set and the augmented data set is the following ... 
+![alt text][samples_grey]
 
 
 ####2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
