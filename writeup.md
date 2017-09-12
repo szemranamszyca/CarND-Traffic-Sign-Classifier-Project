@@ -23,7 +23,7 @@ The goals / steps of this project are the following:
 [scaled]: ./imgs/scaled.png "Example of scaled image"
 [rotated]: ./imgs/rotated.png "Example of rotated image"
 [blured]: ./imgs/blured.png "Example of blured image"
-[combined]: ./imgs/blured.png "Example all methods combined"
+[combined]: ./imgs/combined.png "Example all methods combined"
  	
 
 
@@ -60,11 +60,11 @@ Histogram of samples at the beginning:
 As a first step, I've converted all images to greyscale, as it was suggested at *Traffic Sign Recognition with Multi-Scale Convolutional Networks*
 
 To augmented data, I've written some function to help mi with that:
-+ blur
++ blur  
 ![Blured image][blured]
-+ rotate
++ rotate  
 ![Rotated image][rotated]
-+ scaling
++ scaling   
 ![Scaled image][scaled]
 
 All of them you can find in 5-8 cells.
