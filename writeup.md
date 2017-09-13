@@ -95,7 +95,7 @@ Here's a set of example images after all of these modficiations:
 
 #### 2.Final Model architecture
 
-I've decided to use classical LeNet architecture and just tune it a little, adding to dropout method (with probablity 0.75) after Layer 3 and Layer 4
+I've decided to use classical LeNet architecture and just tune it a little, adding the dropout method (with probablity 0.75) after Layer 3 and Layer 4
 
 
 | Layer         		      |     Description	        					                                    | 
