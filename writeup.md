@@ -143,6 +143,9 @@ Here are ten German traffic signs that I found on the web:
 
 ![My signs][internet]
 
+All signs were resized to 32x32 resolution. This could make details on them little fuzzy - like *Road work* or *Right-of-way at the next intersection*. Few of them has quite low contrast (*Priority road*, *Yield*, *No entry*).  *No entry* sign present it from an angle and it might be problem. Also, digit 5 from *Speed limit (50km/h)* could be easily confused with 3.
+
+
 #### 2. Discussion
 
 Here are the results of the prediction:
