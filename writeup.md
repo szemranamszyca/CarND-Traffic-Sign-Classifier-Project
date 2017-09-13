@@ -110,10 +110,10 @@ I've decided to use classical LeNet architecture and just tune it a little, addi
 | Flatten               | input = 5x5x16, output = 400 | 
 | Fully connected		     | Input = 400. Output = 120 |
 | RELU					             |												| 
-| Dropout		             |	keep probability = .5											| 
+| Dropout		             |	keep probability = 0.75											| 
 | Fully connected		     | Input = 120. Output = 84 |
 | RELU					             |												| 
-| Dropout		             |	keep probability = .5											| 
+| Dropout		             |	keep probability = 0.75											| 
 | Fully connected		     | Input = 84. Output = 43 | 
 | Softmax				           |         									| 
  
