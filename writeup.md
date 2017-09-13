@@ -26,7 +26,7 @@ The goals / steps of this project are the following:
 [blured]: ./imgs/blured.png "Example of blured image"
 [combined]: ./imgs/combined.png "Example all methods combined"
 [softmax]: ./imgs/softmax_prop.png "Softmax probability charts"
-[internet]: ./imgs/softmax_prop.png "My set of signs found on Internet"
+[internet]: ./imgs/internet.png "My set of signs found on Internet"
 [lenet]: ./imgs/lenet.png "LeNet architecture"
  	
 
@@ -141,7 +141,7 @@ I decided to add to dropout layers with keep probability 0.75 and that gives me 
 
 Here are ten German traffic signs that I found on the web:
 
-![LeNet Architecture][internet]
+![My signs][internet]
 
 #### 2. Discussion
 
