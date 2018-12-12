@@ -41,7 +41,7 @@ Link to my [project code](https://github.com/szemranamszyca/CarND-Traffic-Sign-C
 
 #### 1. Dataset.
 
-To extract information about dataset, I've just used python functions. At this moment, validation set is loaded from provided file
+To extract information about dataset, I've just used Python functions. At this moment, validation set is loaded from the provided file
 
 - Number of training examples = 34799  
 - Number of validating examples = 4410  
@@ -51,7 +51,7 @@ To extract information about dataset, I've just used python functions. At this m
 
 #### 2. Visualization of the dataset.
 
-Before any operation, here's few examples of signs from dataset:
+Before any operation, there are few examples of signs from dataset:
 ![Samples][samples]
 
 Histogram of samples at the beginning:
@@ -61,9 +61,9 @@ Histogram of samples at the beginning:
 
 #### 1. Describe how you preprocessed the image data.
 
-As a first step, I've converted all images to greyscale, as it was suggested at *Traffic Sign Recognition with Multi-Scale Convolutional Networks*
+As my first step, I've converted all images to greyscale, as it was suggested at *Traffic Sign Recognition with Multi-Scale Convolutional Networks*
 
-To augmented data, I've written some function to help mi with that:
+To augmented data, I've written some functions to help me with that:
 + blur  
 ![Blured image][blured]
 + rotate  
@@ -71,16 +71,16 @@ To augmented data, I've written some function to help mi with that:
 + scaling   
 ![Scaled image][scaled]
 
-All of them you can find in 5-8 cells.
+All of them can be found in 5-8 cells.
 
-As a last step for augmentation I combined all of these method on one image, here's the example:
+As the last step for augmentation, I combined all of these methods on one image, here's the example:
 ![Combined all of methods][combined]
 
-I normalized data using suggested method. During augmentation process I want to reduce disproportion between classes. As you can see at histogram, there's a huge difference in amout of examples for first and second sign. During augmentation process I set minimal amount of each class to 1200 examples.
+I normalized data using suggested method. During augmentation process I want to reduce disproportion between classes. As you can see at histogram, there's a huge difference in amout of examples for the first and the second sign. During augmentation process I set minimal amount of each class to 1200 examples.
 
 ![New histogram][distro_after]
 
-Also, I've decied to get new validation set, splitted from augmented examples. After all of these operations, dataset parameters are:
+Also, I've decied to get new validation set, split from augmented examples. After all of these operations, dataset parameters are:
 
 - Number of training examples = 45888  
 - Number of validating examples = 11472  
@@ -88,7 +88,7 @@ Also, I've decied to get new validation set, splitted from augmented examples. A
 - Image data shape = (32, 32, 1)  
 - Number of classes = 43 
 
-Here's a set of example images after all of these modficiations:
+Here's the set of example images after all these modficiations:
 
 ![Samples after augmentation][samples_grey]
 
@@ -122,7 +122,7 @@ I've decided to use classical LeNet architecture and just tune it a little, addi
 #### 3. Model train parameters.
 
 
-As I mentioned before, I used already implemented LeNet architecture with Adam optimizer and here's my settings:
+As I mentioned before, I've already used implemented LeNet architecture with Adam optimizer. These are my settings:
 - Batch size: 100
 - Epochs: 200
 - Learning rate: 0.0001
@@ -131,19 +131,19 @@ As I mentioned before, I used already implemented LeNet architecture with Adam o
 - Dropout keep probability: 0.75
 
 #### 4. Disscusion
-In *Traffic Sign Recognition with Multi-Scale Convolutional Networks* paper authors wrote, that LeNet neural network architecture could be used as traffic sign classificator. However, even after converting it to greyscale and augmented data, validation accuracy was still not enough (a little more then 90%).  
+Authors of *Traffic Sign Recognition with Multi-Scale Convolutional Networks* wrote that LeNet neural network architecture could be used as traffic sign classificator. However, even after converting it to greyscale and augmented data, validation accuracy was still not enough (a little more than 90%).  
 I decided to add to dropout layers with keep probability 0.75 and that gives me a result of 93.1% for validation set and 88.1% for test set.
  
 
 ### Test a Model on New Images
 
-#### 1. Signs find on Internet
+#### 1. Signs found on the Internet
 
 Here are ten German traffic signs that I found on the web:
 
 ![My signs][internet]
 
-All signs were resized to 32x32 resolution. This could make details on them little fuzzy - like *Road work* or *Right-of-way at the next intersection*. Few of them has quite low contrast (*Priority road*, *Yield*, *No entry*).  *No entry* sign present it from an angle and it might be problem. Also, digit 5 from *Speed limit (50km/h)* could be easily confused with 3.
+All signs were resized to 32x32 resolution. This could make details little fuzzy - like *Road work* or *Right-of-way at the next intersection*. Few of them has quite low contrast (*Priority road*, *Yield*, *No entry*).  *No entry* sign present it from an angle, and it might be a problem. Also, digit 5 from *Speed limit (50km/h)* could be easily confused with 3.
 
 
 #### 2. Discussion
@@ -163,16 +163,16 @@ Here are the results of the prediction:
 | Priority road                       			| Priority road											|  
 | Speed limit (50km/h)	                  | Speed limit (30km/h)						|  
 
-The model guessed correctly 7 of the 10 traffic signs, which gives an accouracy of 70%. This is less than test set accuracy. This result is quite poor and if I ever want to developed my own autonomous vehicle I should improve it because for this moment I could be a really dangerous on the road for other cars.
+The model guessed correctly 7 of the 10 traffic signs, which gives us an accouracy of 70%. This is less than test set accuracy. This result is quite poor, and if I ever want to develop my own autonomous vehicle, I should improve it. At this moment I could be really dangerous on the road for other cars.
 
 #### 3. The top 3 softmax probabilities for each image.
 
 ![Softmax probabilities][softmax]
 
-As I've written in previous paragraph, 7 of 10 signs were guessed correctly with almost always 100% probability. Let's discuss about interesting part - why 3 of them where predicted wrong.  
+As I've written in previous paragraph, 7 of 10 signs were guessed correctly with almost always 100% probability. Let's discuss  an interesting part: why 3 of them where predicted wrongly.  
 
-*Right-of-way at the next intersection* was confused with *Beware of ice/snow*, but still  - nerual network gives a 10% for correct guess. At this poor quality of images, indeed, NN could see some similarities of these two images. Adding the fact, that accuracy of test set is not so high (88%), I get this error.  
+*Right-of-way at the next intersection* was confused with *Beware of ice/snow*, but still  - nerual network gives a 10% for correct guess. With such poor quality of images, indeed, NN could see some similarities of these two images. Considering the fact that accuracy of the test set is not so high (88%), I get this error.  
 
-Very similar situation is with *speed limit 50km/h*, which was by mistake, taken as 30km/h. The same - image quality makes 50 and 30 very similar to each other.
+Very similar situation is with *speed limit 50km/h*, which was taken by mistake as 30km/h. The same situation is here: image quality makes 50 and 30 very similar to each other.
 
-However, the biggest surprise is last error - *Speed limit (70km/h)* was classified as *Keep left* sign, with probability 96.052%! The first thing that came to my head, that something may be wrong with train data - maybe data during augmentation was shifted in dataset? To improve my result and should investigate carefully this error.
+However, the biggest surprise is the last error: *Speed limit (70km/h)* was classified as *Keep left* sign, with probability 96.052%! The first thing that came to my head was that something might be wrong with the train data - maybe data during augmentation was shifted in dataset? To improve my result, I should investigate carefully this error.
