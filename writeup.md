@@ -63,7 +63,7 @@ Histogram of samples at the beginning:
 
 As my first step, I've converted all images to greyscale, as it was suggested at *Traffic Sign Recognition with Multi-Scale Convolutional Networks*
 
-To augmented data, I've written some functions to help me with that:
+To augment data, I've written some functions to help me with that:
 + blur  
 ![Blured image][blured]
 + rotate  
@@ -132,7 +132,7 @@ As I mentioned before, I've already used implemented LeNet architecture with Ada
 
 #### 4. Disscusion
 Authors of *Traffic Sign Recognition with Multi-Scale Convolutional Networks* wrote that LeNet neural network architecture could be used as traffic sign classificator. However, even after converting it to greyscale and augmented data, validation accuracy was still not enough (a little more than 90%).  
-I decided to add to dropout layers with keep probability 0.75 and that gives me a result of 93.1% for validation set and 88.1% for test set.
+I decided to add a dropout layer with "keep probability 0.75" and that gives me a result of 93.1% for validation set and 88.1% for test set.
  
 
 ### Test a Model on New Images
@@ -143,7 +143,7 @@ Here are ten German traffic signs that I found on the web:
 
 ![My signs][internet]
 
-All signs were resized to 32x32 resolution. This could make details little fuzzy - like *Road work* or *Right-of-way at the next intersection*. Few of them has quite low contrast (*Priority road*, *Yield*, *No entry*).  *No entry* sign present it from an angle, and it might be a problem. Also, digit 5 from *Speed limit (50km/h)* could be easily confused with 3.
+All signs were resized to 32x32 resolution. This could make details little fuzzy - like *Road work* or *Right-of-way at the next intersection*. Few of them have quite low contrast (*Priority road*, *Yield*, *No entry*). The image presents the *No entry* sign from an angle perspective, and it might be a problem. Also, digit 5 from *Speed limit (50km/h)* could be easily confused with 3.
 
 
 #### 2. Discussion
